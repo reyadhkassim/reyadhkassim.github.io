@@ -38,13 +38,13 @@
 
     // example:
     createPlatform(400, 350);
-    createPlatform(250, 550, 0.5);//top platform
     createPlatform(500, 550, 0.5);//midle platform
-    createPlatform(110, 460, 0.5);//left patform
-    createPlatform(170, 650, 0.5);//top left
+    createPlatform(110, 460, 0.5);//left patform-
+    createPlatform(110, 250, 0.5);//top left
 
     // ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////Platform(150, 550, 0.5);//top platform
+    
   }
   platform.init = init;
 })(window);

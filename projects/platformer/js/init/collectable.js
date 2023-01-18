@@ -10,6 +10,7 @@
     steve: { assetKey: "steve", points: 30 },
     grace: { assetKey: "grace", points: 40 },
     kennedi: { assetKey: "kennedi", points: 50 },
+    food: { assetKey: "food", points: 1000 },
   };
 
   window.opspark.collectable.type = type;
@@ -39,7 +40,7 @@
     // ALL YOUR CODE GOES BELOW HERE ///////////////////////////////////////
 
     // example:
-    createCollectable( 225, 170, 6, 0.7);
+    createCollectable(type.food, 225, 170, 6, 0.7);
     createCollectable(type.steve, 200, 170, 6, 0.7);
     createCollectable(type.steve, 175, 170, 6, 0.7);
     // ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
