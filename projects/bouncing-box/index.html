@@ -14,7 +14,7 @@
 			user-select: none;
 			display: block;
 			position: absolute;
-			top: 100px;
+			top: 400px;
 			left: 0px;  /* <--- Change me! */
 		}
 		.board{
@@ -58,21 +58,22 @@
 			}
 
 			//////////////////////////////////////////////////////////////////
-			/////////////////// YOUR CODE BELOW HERE /////////////////////////
-			//////////////////////////////////////////////////////////////////
-			
+			/////////////////// YOUR CODE BELOW HERE ///////////////////////////////////////////////
+			/////////////////////////
+			///////////////////
 			// TODO 2 - Variable declarations 
 			var positionX = 0;
-
-			
+			var points = 0;
+			var speed = 10;
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
 			it should move the Box to a new location. If the box drifts off the screen
 			turn it around! 
 			*/
+	
 			function update() {
 				// Increase positionX by 10 pixels
-				positionX = positionX + 10;
+				positionX = positionX + speed;
 			    moveBoxTo(positionX);
 
 
@@ -84,16 +85,17 @@
 			it should increase the points total, increase the speed, and move the box to
 			the left side of the screen.
 			*/
-			function handleBoxClick() {
-
-			}
-            // your code to increase the points varible by 1
-			function handleBoxClick() {
-			 // point go up by 1
+			
+            
+			 function handleBoxClick() {
+		// your code to increase the points varible by 1
+		        points++;
+				changeBoxText(points);
 			 // the box gets faster
+			 speed = speed+ (3);
 			 // change position
-
-var positionX = 0;
+				positionX = 0;
+			
 
 			};
 		})();
