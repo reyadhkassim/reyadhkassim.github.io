@@ -33,12 +33,30 @@ var level01 = function (window) {
                 { "type": "sawblade", "x": 3300, "y": groundY - 7 },
                 { "type": "sawblade", "x": 3500, "y": groundY - 105},
                 { "type": "sawblade", "x": 3650, "y": groundY - 7 },
+                { "type": "sawblade", "x": 3750, "y": groundY - 110},
+                { "type": "sawblade", "x": 3800, "y": groundY - 7},
+                { "type": "sawblade", "x": 3900, "y": groundY - 105  },
+                { "type": "sawblade", "x": 4000, "y": groundY - 105},
+                { "type": "sawblade", "x": 4100, "y": groundY - 7 },
+                { "type": "sawblade", "x": 4200, "y": groundY - 105 },
+                { "type": "sawblade", "x": 4300, "y": groundY - 105 },
+                { "type": "sawblade", "x": 4400, "y": groundY - 7 },
+                { "type": "sawblade", "x": 4500, "y": groundY - 105},
+                { "type": "sawblade", "x": 4600, "y": groundY -105},
+                { "type": "sawblade", "x": 4700, "y": groundY - 105},
+                { "type": "sawblade", "x": 4800, "y": groundY - 7 },
+                { "type": "sawblade", "x": 4900, "y": groundY - 7 },
+                { "type": "sawblade", "x": 5100, "y": groundY - 100 },
+                { "type": "sawblade", "x": 5200, "y": groundY - 7 },
+                { "type": "sawblade", "x": 5400, "y": groundY - 105},
+                { "type": "sawblade", "x": 5700, "y": groundY - 7 },
 
                 { "type": "enemy", "x": 2560, "y": groundY  - 50},
                 { "type": "enemy", "x": 800, "y": groundY - 50},
 
                 { "type": "reward", "x": 1100, "y": groundY - 150 },
                 { "type": "reward", "x": 3000, "y": groundY - 150},
+                { "type": "reward", "x": 4600, "y": groundY - 10 },
             ]
         };
         window.levelData = levelData;
@@ -54,10 +72,12 @@ var level01 = function (window) {
             sawBladeHitZone.x = x; // stores a value as the x position for the hit zone
             sawBladeHitZone.y = y; // stores a value as the y position for the hit zone
             game.addGameItem(sawBladeHitZone); // adds the hit zone as a game item
-            var obstacleImage = draw.bitmap("img/sawblade.png"); // draws the image and stores it in the variable obstacleImage
+            var obstacleImage = draw.bitmap("img/baty.png"); // draws the image and stores it in the variable obstacleImage
             sawBladeHitZone.addChild(obstacleImage); //adds obstacleImage as a child of sawBladeHitZone
-            obstacleImage.x = -25; // assigns a value to the x positon of obstacleImage
-            obstacleImage.y = -25; // assigns a value to the y positon of obstacleImage
+            obstacleImage.x = - 37; // assigns a value to the x positon of obstacleImage
+            obstacleImage.y = - 65; // assigns a value to the y positon of obstacleImage
+            obstacleImage.scaleX = 0.3;
+            obstacleImage.scaleY = 0.3;
         }
      
         function createEnemy(x, y){
@@ -84,15 +104,17 @@ var level01 = function (window) {
 
         function createReward(x, y){
             var reward = game.createGameItem("reward", 25);
-            var gameItem = draw.rect(50, 50, "blue");
-            gameItem.x = -25;
-            gameItem.y = -25;
+            var gameItem = draw.bitmap("img/heart.png");
+            gameItem.x = -37;
+            gameItem.y = -30;
             reward.addChild(gameItem);
             reward.x = x;
             reward.y = y;
             game.addGameItem(reward);
             reward.velocityX = -2;
-    
+            gameItem.scaleX = 0.05;
+            gameItem.scaleY = 0.05;
+
             reward.onPlayerCollision = function (){
                 game.changeIntegrity(10);
                 game.increaseScore(100);
