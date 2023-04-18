@@ -74,10 +74,10 @@ var level01 = function (window) {
             game.addGameItem(sawBladeHitZone); // adds the hit zone as a game item
             var obstacleImage = draw.bitmap("img/baty.png"); // draws the image and stores it in the variable obstacleImage
             sawBladeHitZone.addChild(obstacleImage); //adds obstacleImage as a child of sawBladeHitZone
-            obstacleImage.x = - 37; // assigns a value to the x positon of obstacleImage
-            obstacleImage.y = - 65; // assigns a value to the y positon of obstacleImage
-            obstacleImage.scaleX = 0.3;
-            obstacleImage.scaleY = 0.3;
+            obstacleImage.x = - 20; // assigns a value to the x positon of obstacleImage
+            obstacleImage.y = - 45; // assigns a value to the y positon of obstacleImage
+            obstacleImage.scaleX = 0.2;
+            obstacleImage.scaleY = 0.2;
         }
      
         function createEnemy(x, y){
